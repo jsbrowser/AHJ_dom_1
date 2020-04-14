@@ -11,12 +11,14 @@ function getPoint() {
   const i = randomPointX(arr);
   const j = randomPointY(0, 3);
 
+  console.log(i, j);
+
   return (document.getElementById('table').childNodes[0].childNodes[i].cells[j]);
 }
 
 function setPicture() {
   const image = document.createElement('img');
-  image.src = '/src/img/goblin.png';
+  image.src = './img/goblin.png';
   image.style.width = '50%';
   image.style.height = 'auto';
 
