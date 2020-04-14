@@ -33,7 +33,7 @@ function setPicture() {
   setTimeout(() => {
     clearInterval(timerId);
     end.innerHTML = '';
-  }, 1000000);
+  }, 1000);
 }
 
 getPoint();
