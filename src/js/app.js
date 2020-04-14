@@ -12,6 +12,7 @@ function getPoint() {
   const j = randomPointY(0, 3);
 
   console.log(i, j);
+  console.log(document.getElementById('table').childNodes[0].childNodes[i].cells[j]);
 
   return (document.getElementById('table').childNodes[0].childNodes[i].cells[j]);
 }
