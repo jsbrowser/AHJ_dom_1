@@ -1,16 +1,20 @@
-const randomPointX = (arr) => arr[Math.floor(Math.random() * (arr.length))];
+function randomPointX(arr) {
+  return arr[Math.floor(Math.random() * (arr.length))];
+}
 
-const randomPointY = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
+function randomPointY(min, max) {
+  return Math.floor(min + Math.random() * (max + 1 - min));
+}
 
-const getPoint = () => {
+function getPoint() {
   const arr = [0, 2, 4, 6];
   const i = randomPointX(arr);
   const j = randomPointY(0, 3);
 
   return (document.getElementById('table').childNodes[0].childNodes[i].cells[j]);
-};
+}
 
-const setPicture = () => {
+function setPicture() {
   const image = document.createElement('img');
   image.src = '/src/img/goblin.png';
   image.style.width = '50%';
@@ -28,7 +32,7 @@ const setPicture = () => {
     clearInterval(timerId);
     end.innerHTML = '';
   }, 1000000);
-};
+}
 
 getPoint();
 setPicture();
