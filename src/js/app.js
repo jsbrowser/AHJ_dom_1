@@ -7,19 +7,18 @@ function randomPointY(min, max) {
 }
 
 function getPoint() {
-  const arr = [0, 2, 4, 6];
+  const arr = [0, 1, 2, 3];
   const i = randomPointX(arr);
   const j = randomPointY(0, 3);
 
   console.log(i, j);
-  console.log(document.getElementById('table').childNodes[0].childNodes[i].cells[j]);
 
   return (document.getElementById('table').childNodes[0].childNodes[i].cells[j]);
 }
 
 function setPicture() {
   const image = document.createElement('img');
-  image.src = './img/goblin.png';
+  image.src = './goblin.png';
   image.style.width = '50%';
   image.style.height = 'auto';
 
@@ -34,7 +33,7 @@ function setPicture() {
   setTimeout(() => {
     clearInterval(timerId);
     end.innerHTML = '';
-  }, 1000);
+  }, 1000000);
 }
 
 getPoint();
