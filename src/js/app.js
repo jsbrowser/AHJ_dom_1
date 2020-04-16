@@ -14,23 +14,20 @@ function getPoint() {
   return (document.getElementById('table').rows[i].cells[j]);
 }
 
+const image = document.createElement('img');
+image.src = './goblin.png';
+image.style.width = '50%';
+image.style.height = 'auto';
 
-function setPicture() {
-  const image = document.createElement('img');
-  image.src = './goblin.png';
-  image.style.width = '50%';
-  image.style.height = 'auto';
+let point = getPoint();
+let end;
 
-  let point = getPoint();
-  let end;
-
-  setInterval(() => {
-    if (point === end) {
-      do {
-        point = getPoint();
-      } while (point === end);
-    }
-    point.appendChild(image);
-    end = point;
-  }, 1000);
-}
+setInterval(() => {
+  if (point === end) {
+    do {
+      point = getPoint();
+    } while (point === end);
+  }
+  point.appendChild(image);
+  end = point;
+}, 1000);
